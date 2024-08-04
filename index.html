@@ -1,0 +1,601 @@
+<!--
+Kelompok 4
+Kelas: IT204
+Mata Kuliah: Pemrograman Web I
+Anggota:
+1. Excel Prima Bara 230401010231
+2. Deni Setiawan 230401010221
+3. Rizqi Nur Rifai 230401010231
+4. Parna Erikson Saragi 230401020063
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pemograman Web 1</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="nav.css" rel="stylesheet">
+        <script src="section-title.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body>
+        <nav class="nav-bg">
+            <div class="container d-flex align-items-center  justify-content-between m-auto py-2">
+              <div class="logo d-flex align-items-center justify-content-center flex-shrink-0">
+                <img src="./img/unsia_logo.jpg"/>
+              </div>
+              <div class="active-section d-flex align-items-center px-2">
+                <p id="section-title" class="m-0">Section yang sedang dibaca</p>
+              </div>
+              <div class="progress d-flex align-items-center  flex-shrink-0">
+                <div class="canvas-container">
+                  <canvas id="myChart"></canvas>
+                  <span id="percentage">0<span>%</span></span>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <header>
+            <div class="container d-flex align-items-center gap-4 p-4 border-bottom">
+                <picture class="flex-shrink-0 w-25">
+                    <img class="rounded-md img-fluid" src="img/pichtml.jpg" alt="Pemrograman Web I">
+                </picture>
+                <div class="flex-grow-1">
+                    <h1>Pemrograman Web I</h1>
+                    <p class="text-muted">Mata kuliah sebagian besar akan berupa latihan-latihan intensif guna meningkatkan
+                        kemampuan para mahasiswa membuat program berbasis web menggunakan HTML dan CSS untuk berjalan di
+                        atas platform browser web internet yang dapat digunakan untuk melakukan transformasi data menjadi
+                        Informasi, Latihan-latihan secara khusus ditujukan untuk menerapkan prinsip pemrograman dalam
+                        membuat aplikasi halaman web</p>
+                </div>
+            </div>
+        </header>
+        <article class="container mt-4">
+            <div class="row">
+                <!-- Sidebar Menu -->
+                <div class="col-md-3">
+                    <nav id="sidebar" class="sticky-top">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading1">Tujuan Instruksional Umum</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading2">Pengenalan Dasar HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading3">Tag, Elemen, dan Atribut</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading4">Membuat Paragraf di HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading5">Heading, Komentar, dan Text Formatting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading6">Membuat Link pada HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading7">Gambar dan Tabel di HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading8">Membuat List di HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading9">Membuat Form pada HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading10">Elemen Semantik pada HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading11">Menampilkan Video pada HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading12">Menambahkan Audio pada HTML</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading13">Membuat Project Web Pribadi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading14">Pengenalan Dasar CSS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#heading15">5 Macam Selektor Pada CSS</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="col-md-9">
+                    <div class="accordion" id="accordion-main">
+                        <div class="accordion-item" id="heading1">
+                            <h2 class="accordion-header" >
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Tujuan Instruksional Umum
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-main">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Mahasiswa mampu menguasai tentang konsep dasar HTML</li>
+                                        <li>Mahasiswa mampu menguasai tentang penggunaan Tag, Elemen, dan Atribut</li>
+                                        <li>Mahasiswa mampu menguasai tentang penggunaan Paragraf</li>
+                                        <li>Mahasiswa mampu menguasai tentang penggunaan Heading, Komentar, dan Text Formatting</li>
+                                        <li>Mahasiswa mampu menguasai tentang penggunaan elemen link</li>
+                                        <li>Mahasiswa mampu menguasai tentang implementasi gambar dan tabel</li>
+                                        <li>Mahasiswa mampu menguasai tentang penggunaan list</li>
+                                        <li>Mahasiswa mampu menguasai tentang penggunaan form</li>
+                                        <li>Mahasiswa mampu menguasai tentang implementasi elemen semantik</li>
+                                        <li>Mahasiswa mampu menguasai tentang implementasi konten video</li>
+                                        <li>Mahasiswa mampu menguasai tentang implementasi konten audio</li>
+                                        <li>Mahasiswa mampu menguasai tentang konsep dasar membangun sebuah website</li>
+                                        <li>Mahasiswa mampu menguasai tentang konsep dasar CSS</li>
+                                        <li>Mahasiswa mampu menguasai tentang jenis-jenis dan warna dalam CSS</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading2">
+                            <h2 class="accordion-header" >
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Pengenalan Dasar HTML
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordion-main">
+                                <div class="accordion-body">
+                                    <p>HTML itu adalah sebuah bahasa yang menggunakan markup atau penanda untuk membuat halaman
+                                        web.
+                                        Penanda atau markup ini, nanti akan kita sebut dengan Tag. HTML berperan untuk
+                                        menentukan
+                                        struktur konten dan tampilan dari sebuah web. HTML itu seperti batu bata untuk membangun
+                                        rumah.
+                                        Batu bata ini dapat disusun, hingga menjadi fondasi dasar.</p>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/jNsK1l0dLRk?si=Q82RiEzhCsYbTSzl"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading3">
+                            <h2 class="accordion-header" >
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Mengenal Tag, Elemen, dan Atribut dalam HTML
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordion-main">
+                                <div class="accordion-body">
+                                    <span>
+                                        <ol>
+                                            <li>
+                                                <p>Tag adalah sebauh <strong>penanda awalan</strong> dan
+                                                    <strong>akhiran</strong> dari
+                                                    sebuah <strong>elemen</strong> di HTML. Tag dibuat dengan kurung siku
+                                                    <code>(&lt;...&gt;)</code>, lalu di dalamnya berisi nama tag dan kadang juga
+                                                    ditambahkan dengan atribut.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>Elemen dalam HTML adalah sebuah komponen yang menyusun dokumen HTML. Elemen
+                                                    kadang
+                                                    juga disebut sebagai node, karena ia merupakan salah satu jenis node yang
+                                                    menyusun
+                                                    dokumen HTML dalam diagram HTML tree.</p>
+                                            </li>
+                                            <li>
+                                                <p>Atribut adalah kata khusus yang berada di dalam tag pembuka. Atribut juga
+                                                    disebut
+                                                    sebagai modifier yang akan menentukan perliaku dari elemen.</p>
+                                            </li>
+                                        </ol>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/UVvsI12LITU?si=faMxdKBGzeVEA2ka"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Membuat Paragraf di HTML</button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show"  >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Pada materi ini, kita belajar beberapa tag:
+                                        <ol>
+                                            <li><code>&lt;p&gt;</code> untuk membuat paragraf</li>
+                                            <li><code>&lt;hr&gt;</code> untuk membuat garis lurus</li>
+                                            <li><code>&lt;br&gt;</code> untuk membuat baris baru</li>
+                                            <li><code>&lt;div&gt;</code> untuk membuat paragraf di luar artikel atau layaout
+                                            </li>
+                                            <li><code>&lt;pre&gt;</code> untuk membuat paragraf dengan format yang sudah
+                                                ditentukan.
+                                            </li>
+                                        </ol>
+                                        Ini adalah tag-tag dasar yang perlu diingat dalam membuat paragraf di HTML.
+                                        </p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/6e8F9ZaMg1c?si=1RBwk6B6CcHokP8C"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading5">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Heading, Komentar, dan Text Formatting di HTML</button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p><strong>Heading adalah sebuah judul</strong> yang biasanya diberikan pada halaman
+                                            atau
+                                            beberapa bagian dari artikel.</p>
+                                        <p>Jika kamu sering menulis artikel, pasti ini tidak asing buatmu.</p>
+                                        <p><strong>Komentar adalah elemen yang akan diabaikan oleh browser</strong>. Ia tidak
+                                            akan
+                                            ditampilkan di dalam web.</p>
+                                        <p>Komentar biasanya digunakan untuk memberikan informasi tambahan pada kode HTML dan
+                                            kadang
+                                            juga digunakan untuk menon-aktifkan beberapa kode HTML.</p>
+                                        <p>Teks yang terformat akan lebih mudah dibaca, karena ada
+                                            <strong><u>penegasan</u></strong>
+                                            seperti <strong>teks tebal</strong>, <em>miring</em>, dan <u>garis bawah</u>.</p>
+                                        <p>Saat kita mencari kata atau kalimat penting.. mata kita akan lebih mudah menemukannya
+                                            pada
+                                            teks yang terformat dibandingkan <em>plain text</em>.</p>
+                                        <p>Karena itu, dalam membuat web.. ada baiknya menggunakan format teks.</p>
+                                        <p>Nah, di HTML terdapat tag-tag yang khusus digunakan untuk <em> text formatting </em>.
+                                        </p>
+                                    </span>
+                                    <div>
+                                        <h3>Heading di HTML Part-1</h3>
+                                        <iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/COkuM-JTnJU?si=SE9vpNtdLg8ucfdR"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <h3>Komentar di HTML Part-2</h3>
+                                        <iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/T7wD9hEjP60?si=ES08V8rgul_wqZlN"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <h3>Text Formatting di HTML Part-3</h3>
+                                        <iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/uR07z7Qqioo?si=M4VsxZNmBoXVW0Gy"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading6">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Membuat Link pada HTML</button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Link atau Hyperlink adalah elemen HTML yang berfungsi menghubungkan suatu halaman
+                                            web ke
+                                            halaman web yang lain. Elemen ini bisa diklik.. dan nanti akan membuka halaman
+                                            lain sesui
+                                            alamat URL yang diberikan.</p>
+                                        <p>Link pada HTML dapat dibuat dengan tag , kemudian tag ini harus memiliki atribut
+                                            href untuk
+                                            menentukan alamat URL tujuan dari link.</p>
+                                    </span>
+                                    <div>
+                                        <iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/v5_cCHD6T5c?si=iseBDsjr3pnwl9rb"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading7">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Gambar dan Tabel di HTML</button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse show"
+                                >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Gambar akan membuat website kita terlihat lebih menarik. Karena otak kita lebih mudah
+                                            menyerap informasi dengan visual dibandingkan hanya teks saja.Karena itu, gambar sangatlah
+                                            penting. Pada tutorial ini, kita akan belajar cara menambahkan gambar di HTML.</p>
+                                        <p>Salah satu cara atau format menampilkan informasi dalam web adalah dengan tabel.</p>
+                                        <ol>
+                                            <p>Tabel terdiri dari 4 unsur utama :</p>
+                                            <li>Baris</li>
+                                            <li>Kolom</li>
+                                            <li>Sel</li>
+                                            <li>Garis</li>
+                                        </ol>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/O3jJiyssD04?si=TwKQFqWe9p9uQfO5"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading8">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    Membuat List di HTML</button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse show"
+                                >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>HTML sudah menyediakan elemen untuk membuat list. Ada tiga macam jenis list yang bisa dibuat
+                                            di HTML:</p>
+                                        <ol>
+                                            <li>
+                                                <p><strong>Ordered List</strong> adalah list yang terurut</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Unordered List</strong> adalah list yang tak terurut</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Description List</strong> adalah list yang berisi definisi.</p>
+                                            </li>
+                                        </ol>
+                                        <p>Mari kita bahas satu-per-satu…</p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/u2OHREqqhbM?si=X83-8R6AIw4LcET9"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading9">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Membuat Form pada HTML</button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Form di HTML dapat kita buat dengan tag.</p>
+                                        <p>Tag ini memiliki beberapa atribut yang harus diberikan, seperti:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Action untuk menentukan hasil yang akan dilakukan saat data dikirim</p>
+                                            </li>
+                                            <li>
+                                                <p>Metode pengiriman data.</p>
+                                            </li>
+                                        </ul>
+                                        <p>Contoh:
+                                            <code>
+                                    <p>&lt;form&gt; action="prosess.php" method="GET"></p>
+                                    <p>&lt;!-- form field di sini --&gt;</p>
+                                    <p>&lt;/form&gt;</p>
+                                </code>
+                                        </p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/c_cc_BTC6-A?si=4i5ZI73kknGGLOlt"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading10">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Elemen Semantik pada HTML</button>
+                            </h2>
+                            <div id="collapseTen" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Di HTML terdapat beberapa elemen yang khusus untuk melakukan ini. Yakni elemen semantik
+                                            seperti
+                                            <code>&lt;header&gt;</code>,<code>&lt;aside&gt;</code>,<code>&lt;footer&gt;</code>,<code>&lt;article&gt;</code>,
+                                            dll.
+                                        </p>
+                                        <p>Elemen semantik sebenarnya tidak hanya digunakan untuk membuat layout saja. Ia juga digunakan
+                                            untuk membuat elemen lain.</p>
+                                        <p>Di awal-awal hadirnya HTML dulu, elemen semantik belum ada. Orang-orang membuat layout dengan
+                                            menggunakan <strong>tag yang salah</strong>. Ada yang membuatnya dengan tag
+                                            <code>&lt;tabel&gt;</code> dan ada juga dengan tag <code>&lt;div&gt;</code>.
+                                        </p>
+                                        <p>Ini sebenarnya tidak sepenuhnya salah, karena membuat layout dengan kedua tag itu benar-benar
+                                            bisa. Tapi, ini bukanlah cara yang baik dan akan membuat kode HTML kita sulit terbaca.
+                                            Karena itu, hadirlah elemen semantik sebagai solusi.</p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/cp65r8rbtis?si=txCVXpHvxoXG9dOV"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading11">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                    Menampilkan Video pada HTML</button>
+                            </h2>
+                            <div id="collapseEleven" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Pada pertemuan sebelumnya, kita sudah belajar cara menambahkan gambar di HTML. Namun, ini
+                                            belumlah cukup, karena sekarang konten di web tidak hanya dalam bentuk teks dan gambar saja.
+                                            Konten lainnya yang bisa ditambahkan di HTML adalah audio dan juga video. Nah, pada
+                                            pertemuan kali ini, kita akan belajar cara menambahkan video di HTML.</p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/7MdcfVM2Zz0?si=46Ses3gU2OgF6riA"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading12">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                    Menambahkan Audio pada HTML</button>
+                            </h2>
+                            <div id="collapseTwelve" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Konten dalam web, tidak hanya dalam bentuk teks dan gambar saja. Tapi juga bisa dalam bentuk
+                                            multimedia seperti audio dan video.</p>
+                                        <p>Pada tutorial ini, kita akan fokus membahas tentang audio di HTML.</p>
+                                        <p>Konten audio biasanya berbentuk <em>podcast</em>, <em>audiobook</em>, dan musik.</p>
+                                        <p>Lalu pertanyaanya:</p>
+                                        <p>Bagaimana cara menambahkan audio di HTML?</p>
+                                        <p>Mari kita bahas.</p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/16cUF2UqpQE?si=IFX-kabOLTGOWgur"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading13">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThirdteen" aria-expanded="false" aria-controls="collapseThirdteen">
+                                    Membuat Project Web Pribadi dengan HTML</button>
+                            </h2>
+                            <div id="collapseThirdteen" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Pembuatan web dimulai dengan desain. Kalau tidak ada desain, nanti kita akan kesulitan dan
+                                            tidak akan tahu mau buat apa. Biasanya desain web dikerjakan oleh desainer, setelah itu
+                                            diserahkan ke programmer untuk diubah menjadi HTML.</p>
+                                        <p>Pada project ini, kita akan membuat tiga halaman web, yakni <em>home</em>, <em>contact</em>,
+                                            dan <em>about</em>. Desain yang digunakan adalah desain dalam bentuk <em>wireframe</em> atau
+                                            sketsa.</p>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/kjdT_M2F9tc?si=S50eDpyVrUVhawhZ"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading14">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                                    Pengenalan Dasar CSS</button>
+                            </h2>
+                            <div id="collapseFourteen" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>CSS adalah bahasa kedua setelah HTML yang harus dipelajari seorang <em>web developer</em>.
+                                        </p>
+                                        <p>Pengetahuan tentang CSS sangatlah penting bagi seorang web developer, karena dengan CSS kita
+                                            bisa:</p>
+                                        <ol>
+                                            <li>
+                                                <p>Halaman <em>landing page</em> yang menarik;</p>
+                                            </li>
+                                            <li>
+                                                <p>Template atau tema blog</p>
+                                            </li>
+                                            <li>
+                                                <p>Mengubah PSD (Desain web) menjadi HTML</p>
+                                            </li>
+                                            <li>
+                                                <p>dan sebagainya.</p>
+                                            </li>
+                                        </ol>
+                                    </span>
+                                    <div><iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/jKDG1qFAtgA?si=RRVqUBwqAMrQXuGa"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="heading15">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                    5 Macam Selektor Pada CSS</button>
+                            </h2>
+                            <div id="collapseFifteen" class="accordion-collapse collapse show" >
+                                <div class="accordion-body">
+                                    <span>
+                                        <p>Hal dasar yang harus kita ketahui setelah memahami cara menulis HTML di CSS adalah selektor.
+                                            Selektor adalah katakunci dan simbol yang digunakan pada CSS untuk menyeleksi atau memilih
+                                            elemen HTML. Nilai warna dalam CSS dapat kita berikan dengan berbagai cara. Salah satunya
+                                            dengan menuliskan nama warna dalam bahasa inggris.</p>
+                                        <div>
+                                            <p>Contoh :
+                                            <ul>
+                                                <li>Selektor elemen: <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>,
+                                                    <code>&lt;h1&gt;</code> sampai <code>&lt;h6&gt;</code>
+                                                </li>
+                                                <li>Selektor kelas: <code>.classname</code></li>
+                                                <li>Selektor ID: <code>#idname</code></li>
+                                                <li>Selektor atribut: <code>[attribute="value"]</code></li>
+                                                <li>Selektor pseudo-class: <code>:first-child</code></li>
+                                            </ul>
+                                            <p>Ada beberapa cara untuk menentukan warna dalam CSS:</p>
+                                            <ul>Nama warna dalam bahasa Inggris: <code>red, blue, green</code></ul>
+                                            <ul>Nilai heksadesimal: <code>#FF0000 (merah)</code></ul>
+                                            <ul>RGB: <code>(255, 0, 0) (merah)</code></ul>
+                                            <ul>RGBA: <code>(255, 0, 0, 0.5) (merah dengan transparansi 50%)</code></ul>
+                                            <ul>HSL: <code>hsl(0, 100%, 50%) (merah)</code></ul>
+                                            <ul>HSLA: <code>hsla(0, 100%, 50%, 0.5) (merah dengan transparansi 50%)</code></ul>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer class="bg-light text-center py-4">
+            <p>&copy; 2024 Pemrograman Web 1 Kelompok 4. All rights reserved.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
